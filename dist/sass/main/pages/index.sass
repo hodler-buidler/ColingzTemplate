@@ -1,0 +1,463 @@
+@import ../settings
+
+/* Page header */
+
+.page-header
+    height: 100vh
+    display: flex
+
+    &__investment
+        &_wrapper
+            @include setBgImg("../images/starterBg1.jpg", "center no-repeat")
+            padding:
+                left: $tab_standart_padding
+                right: 5vw
+
+    &__investment-social-media
+        display: none
+
+    &__travel
+        align-items: flex-end
+        text-align: right
+
+        &_wrapper
+            @include setBgImg("../images/starterBg2.jpg", "center no-repeat")
+            padding:
+                left: 5vw
+                right: $tab_standart_padding
+
+    &__investment, &__travel
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        height: 100%
+
+        &-description
+            font-family: font(regular)
+            line-height: 1.8
+
+        &_wrapper
+            width: 50%
+            background-size: cover
+            padding:
+                top: 3.5vh
+                bottom: 12vh
+
+    &__section-info
+        display: flex
+        flex-direction: column
+
+        &_right
+            align-items: flex-end
+
+    &__more-about-btn
+        margin-top: 4vmin
+
+/* Self introduction and skills */
+
+.self-intro
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+    &_wrapper
+        background: color(primary)
+        padding: $tab_standart_padding
+
+    &_left
+        min-width: 250px
+
+    &_right
+        width: 45vmax
+
+.personal-description
+    &__my-photo
+        width: 25vmax
+        height: 25vmax
+        min-width: 150px
+        min-height: 150px
+        display: flex
+        justify-content: flex-end
+        align-items: flex-end
+        margin: 3vh 0
+
+        &_social-indent
+            margin: 0.5vmax 1vmax
+
+    &__content
+        width: 25vmax
+        min-width: 250px
+
+.skill-pick
+    width: 3.2vmax
+    min-width: 20px
+    margin-right: 2vw
+
+    &__img
+       width: 100%
+
+.personal-skills
+    margin-left: 4vw
+
+    &__skill-header
+        text-transform: uppercase
+
+    &__skill
+        display: flex
+        align-items: center
+        margin: 4vh 0
+
+/* Timeline */
+
+%timelinePointAfterStyles
+    content: ""
+    display: block
+    margin: auto
+    width: 0.2vw
+    min-width: 2px
+    height: 2.7vh
+
+// Here I'm breaking the rules of BEM because I need to manipulate some custom Slick slider classes
+.timeline
+    display: flex
+    justify-content: space-between
+    align-items: stretch
+
+    &__history
+        display: flex
+        flex-direction: column
+        justify-content: space-around
+
+    &_wrap
+        padding: $tab_standart_padding
+        @include setBgImg("../images/BusinessManBg.png", "center no-repeat", true, #263238)
+        background-size: cover
+        background-attachment: fixed
+
+    &__years-slider
+        width: 35vw
+
+        .slick-track
+            display: flex
+            align-items: stretch
+
+        .slick-current
+            .timeline__year
+                color: color(primary)
+                font-size: 10vmin
+                font-weight: bold
+                font-family: font(medium)
+
+                &:after
+                    @extend %timelinePointAfterStyles
+                    margin-top: 11vh
+                    background: color(primary)
+
+        .slick-slide
+            height: auto
+            display: flex
+            justify-content: center
+            align-items: flex-end
+
+
+    &__year
+        color: color(secondary)
+        font-family: font(regular)
+
+        &:not(.slick-current)
+            cursor: pointer
+
+        &:not(.slick-current):after
+            @extend %timelinePointAfterStyles
+            margin-top: 2vh
+            background: color(secondary)
+
+    &__year-achievement-slider
+        width: 35vw
+
+.achievement
+    color: color(alternative)
+
+    &__company-logo
+        margin: 2.5vh 0
+        width: 10vmax
+        min-width: 60px
+
+        &_img
+            width: 100%
+
+    &__header
+        color: color(primary)
+
+    &__company-name
+        text-transform: uppercase
+
+    &__my-position
+        font-family: font(regular)
+
+    &__link
+        color: color(primary)
+        font-family: font(medium)
+
+        &:hover
+            color: color(alternative)
+
+/* Social media posts */
+
+.social-media-posts
+    &_wrap
+        padding: $tab_shorten_padding $tab_standart_padding
+        background-color: color(muted)
+
+    &__dots
+        display: flex
+        justify-content: center
+        align-items: center
+        margin-top: 2vh
+
+    &__dot
+        width: 1.35vmin
+        height: 1.35vmin
+        min-width: 7px
+        min-height: 7px
+        border-radius: 50%
+        border: 0.4vmin solid color(default)
+        @extend %fastTransition
+        cursor: pointer
+        margin: 0 0.5vw
+
+        &:hover, .slick-active &
+            background: color(default)
+
+
+    .slick-track
+        display: flex
+        align-items: stretch
+
+    &__slide
+        height: auto
+
+.social-post
+    margin: 2vmin
+    padding: 2vmin
+    @extend %fastTransition
+
+    &__href
+        color: color(secondary)
+
+    &:hover
+        background: color(alternative)
+        box-shadow: 0 0 1.3vmin rgba(0,0,0,0.25)
+
+    &:active
+        opacity: 0.6
+
+    &:hover &__social-icon, &:hover &__media-name
+        color: color(info)
+
+    &__data
+        display: flex
+        align-items: baseline
+        margin: 1vh 0
+
+    &__media-name
+        font-weight: bold
+        font-family: font(medium)
+        margin-right: 3vw
+    
+    &__date
+       font-family: font(regular)
+
+/* Travel memory */
+
+.travel-memory
+    &_wrap
+        background-color: color(primary)
+        padding: $tab_standart_padding 0
+
+    &__header, &__slider-controls
+        padding: 0 $tab_standart_padding
+
+    &__slider
+        margin:
+            top: 8vh
+            bottom: 4vh
+
+    &__slider-controls
+        display: flex
+        align-items: center
+        justify-content: space-between
+
+    &__prev, &__next
+        width: 4vmax
+        cursor: pointer
+        min-width: 40px
+        fill: color(alternative)
+        @extend %fastTransition
+
+    &__prev:hover, &__next:hover
+        fill: color(default)
+
+    &__prev:active, &__next:active
+        opacity: 0.8
+
+
+.travel-place
+    margin-right: 3vmin
+    height: 38vmax
+    margin: 0 3vmin
+    position: relative
+    cursor: pointer
+    @extend %fastTransition
+
+    &:hover
+        box-shadow: 0 0 1vmin rgba(0,0,0,0.8)
+
+    &:hover &__description_wrap
+        opacity: 1
+
+    &__description
+        color: color(alternative)
+        margin: 7vmin
+
+        &_wrap
+            position: absolute
+            width: 100%
+            height: 100%
+            background: rgba(color(default), 0.85)
+            display: flex
+            opacity: 0
+            align-items: flex-end
+            @extend %mediumTransition
+
+    &__header
+        text-transform: uppercase
+
+    &__details
+        font-family: font(regular)
+        margin-bottom: 2.2vh
+
+/* Journal */
+
+.journal
+    &_wrap
+        padding: $tab_standart_padding
+        background-color: color(muted)
+
+    &__header-panel
+        display: flex
+        justify-content: space-between
+        align-items: center
+
+    &__all-posts-link
+        display: flex
+        align-items: center
+        font-family: font(medium)
+
+        &:hover .journal__all-posts-arrow
+            fill: color(primary)
+
+    &__all-posts-arrow
+        fill: color(default)
+        width: $medium_font_size
+        min-width: 15px
+        transition: inherit
+        margin-left: 0.4vw
+
+    &__posts
+        margin-top: 3vh
+        display: grid
+        grid-gap: 6vmin
+        grid-template-columns: repeat(3, 1fr)
+
+    &__cards-storage
+        display: flex
+        justify-content: space-between
+        flex-direction: column
+
+
+$post_preview_body_vertical_padding: 4.5vmin
+$post_preview_body_horizontal_padding: 4vmin
+
+.post-preview
+    background-color: color(alternative)
+
+    &__body
+        padding: $post_preview_body_vertical_padding $post_preview_body_horizontal_padding
+
+    &__info
+        color: color(secondary)
+        font-family: font(regular)
+
+        &_wrap
+            display: flex
+            justify-content: space-between
+            margin-top: 1vh
+
+    &__socials
+        margin: 0 0.4vw
+        &_wrap
+            display: flex
+
+.card-image-preview
+    &__image
+        height: 50%
+        @extend %fastTransition
+
+        &:hover
+            opacity: 0.8
+
+.card-preview
+    margin: 3vmin 0
+
+    &:first-child
+        margin-top: 0
+
+    &:last-child
+        margin-bottom: 0
+
+.full-bg-preview
+    color: color(alternative)
+    position: relative
+
+    &__body
+        background: rgba(color(default), 0.75)
+        height: calc(100% - #{$post_preview_body_vertical_padding * 2})
+
+    &__link
+        color: inherit
+
+    &__read-more-link
+        color: color(primary)
+        font-family: font(medium)
+
+/* Features */
+
+.features
+    display: grid
+    grid-template-columns: repeat(4, 1fr)
+    text-align: center
+
+    &_wrap
+        padding: $tab_shorten_padding $tab_standart_padding
+        background-color: color(primary)
+
+    &__item
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        margin: 0 3vw
+
+        &:first-child
+            margin-left: 0
+
+        &:last-child
+            margin-right: 0
+
+    &__description
+        margin-top: 3vh
+        line-height: 2.2
+
+    &__img
+        height: 7vh
+        min-height: 20px

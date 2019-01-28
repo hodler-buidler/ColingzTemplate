@@ -1,0 +1,63 @@
+@import ../settings
+
+/* Major media styles that can be applied to any page of project */
+
+/* Square orientation */
+@media screen and (max-aspect-ratio: 1000/1000)
+    /* Footer */
+
+    .page-footer
+        flex-direction: column
+
+        &__social-media
+            margin-top: 3vh
+
+        &__contacts
+            margin-top: 2vh
+
+        &__data-area
+            margin-top: 4vh
+
+// * Font-sizes *
+// Changing font sizes
+// Common text
+$small_font_size: 1.9vmax
+$default_font_size: 2.15vmax
+$medium_font_size: 2.3vmax
+$big_font_size: 2.7vmax
+$super_big_font_size: 3.5vmax
+// Headers
+$h1_font_size: 6vmax
+$h2_font_size: 4.5vmax
+$h3_font_size: 4vmax
+$h4_font_size: 3vmax
+$h5_font_size: 2.6vmax
+$h6_font_size: $default_font_size
+
+/* For portrait orientation of mobile devices */
+/* Adjusting font sizes */
+@media screen and (max-aspect-ratio: 1000/1200)
+    // Changing font sizes of regular elements due to variables
+    @import main/fonts-change
+
+// * Font-sizes *
+// Changing font sizes
+// Common text
+$small_font_size: 2.1vmin
+$default_font_size: 2.9vmin
+$medium_font_size: 3.6vmin
+$big_font_size: 4.5vmin
+$super_big_font_size: 5vmin
+// Headers
+$h1_font_size: 8vmin
+$h2_font_size: 6.5vmin
+$h3_font_size: 5vmin
+$h4_font_size: 4vmin
+$h5_font_size: 3.5vmin
+$h6_font_size: $default_font_size
+
+/* For tablets and horizontal orientation of mobile devices */
+/* Adjusting font sizes */
+@media screen and (min-aspect-ratio: 1000/650) and (max-width: 900px)
+    // Changing font sizes of regular elements due to variables
+    @import main/fonts-change
