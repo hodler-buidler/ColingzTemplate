@@ -32,20 +32,24 @@
  */
 /* Including fonts */
 @font-face {
-  src: url("../../fonts/Roboto-Light.ttf");
-  font-family: "Roboto Light"; }
+  src: local("Roboto Light"), url("../../fonts/Roboto-Light.ttf");
+  font-family: "Roboto Light";
+  font-display: swap; }
 
 @font-face {
-  src: url("../../fonts/Roboto-Regular.ttf");
-  font-family: "Roboto"; }
+  src: local("Roboto"), url("../../fonts/Roboto-Regular.ttf");
+  font-family: "Roboto";
+  font-display: swap; }
 
 @font-face {
-  src: url("../../fonts/Roboto-Medium.ttf");
-  font-family: "Roboto Medium"; }
+  src: local("Roboto Medium"), url("../../fonts/Roboto-Medium.ttf");
+  font-family: "Roboto Medium";
+  font-display: swap; }
 
 @font-face {
-  src: url("../../fonts/Roboto-Black.ttf");
-  font-family: "Roboto Black"; }
+  src: local("Roboto Black"), url("../../fonts/Roboto-Black.ttf");
+  font-family: "Roboto Black";
+  font-display: swap; }
 
 /* Basic styling of tags */
 body {

@@ -3,20 +3,24 @@
 /* Including fonts */
 
 @font-face
-    src: url(map-get($fonts_paths, main-font))
+    src: local(font(main-font)), url(map-get($fonts_paths, main-font))
     font-family: font(main-font)
+    font-display: swap
 
 @font-face
-    src: url(map-get($fonts_paths, regular))
+    src: local(font(regular)), url(map-get($fonts_paths, regular))
     font-family: font(regular)
+    font-display: swap
 
 @font-face
-    src: url(map-get($fonts_paths, medium))
+    src: local(font(medium)), url(map-get($fonts_paths, medium))
     font-family: font(medium)
+    font-display: swap
 
 @font-face
-    src: url(map-get($fonts_paths, black))
+    src: local(font(black)), url(map-get($fonts_paths, black))
     font-family: font(black)
+    font-display: swap
 
 /* Basic styling of tags */
 
