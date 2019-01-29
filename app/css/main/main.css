@@ -32,19 +32,19 @@
  */
 /* Including fonts */
 @font-face {
-  src: "../../fonts/Roboto-Light.ttf";
+  src: url("../../fonts/Roboto-Light.ttf");
   font-family: "Roboto Light"; }
 
 @font-face {
-  src: "../../fonts/Roboto-Regular.ttf";
+  src: url("../../fonts/Roboto-Regular.ttf");
   font-family: "Roboto"; }
 
 @font-face {
-  src: "../../fonts/Roboto-Medium.ttf";
+  src: url("../../fonts/Roboto-Medium.ttf");
   font-family: "Roboto Medium"; }
 
 @font-face {
-  src: "../../fonts/Roboto-Black.ttf";
+  src: url("../../fonts/Roboto-Black.ttf");
   font-family: "Roboto Black"; }
 
 /* Basic styling of tags */
