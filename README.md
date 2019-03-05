@@ -21,6 +21,15 @@ The responsivity of the template was a whole different dilemma. I used viewport 
 To sum up, I think I've created a modern, quite complicated template which embellishes my portfolio. I'm proud of this work.
 
 # Skills applied
+- HTML
+- CSS
+- Grid
+- Flex
+- Media queries
+- GULP, NPM
+- Javascript
+- Ability to work with other libraries
+- Providing responsivity
 
 # Шаблон Colingz
 Январь 2019.
@@ -39,3 +48,12 @@ To sum up, I think I've created a modern, quite complicated template which embel
 В итоге, я думаю, что создал современный, довольно сложный шаблон, который украшает мое портфолио. Горжусь этой работой.
 
 # Применённые навыки
+- HTML
+- CSS
+- Grid
+- Flex
+- Media запросы
+- GULP, NPM
+- Javascript
+- Способность работать со сторонними библиотеками
+- Обеспечение адаптивности
